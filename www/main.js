@@ -7,10 +7,13 @@ require('angular-moment');
 require('github:jonashartmann/webcam-directive/dist/webcam.min');
 require('./lib/angularLocalStorage-nc/dist/angularLocalStorage.min');
 require('github:mgcrea/angular-strap/src/navbar/navbar');
+require('github:GoDisco/ngFacebook');
+require('github:capaj/angularLocalStorage/dist/angularLocalStorage.min');
 
 require('./js/bootstrap/bootstrap');
 require('./js/controllers/root-ctrl');
-require('./js/directives/dummy');
+require('./js/directives/fb-user');
+require('./js/user/fbUser');
 require('./js/controllers/videochatCtrl');
 require('./js/filters/base64');
 require('./js/controllers/photoCtrl');

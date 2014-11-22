@@ -14,13 +14,15 @@ System.config({
     "angular-animate": "github:angular/bower-angular-animate@^1.3.3",
     "angular-mocks": "github:angular/bower-angular-mocks@^1.3.3",
     "angular-moment": "github:capaj/angular-moment@^0.8.2",
+    "github:GoDisco/ngFacebook": "github:GoDisco/ngFacebook@^0.1.3",
     "github:capaj/angular-moment": "github:capaj/angular-moment@^0.8.3",
+    "github:capaj/angularLocalStorage": "github:capaj/angularLocalStorage@^0.2.1",
     "github:jonashartmann/webcam-directive": "github:jonashartmann/webcam-directive@^1.2.0",
     "github:mgcrea/angular-strap": "github:mgcrea/angular-strap@^2.1.3",
     "jquery": "github:components/jquery@^2.1.1",
     "lodash": "npm:lodash-node@2.4.1",
-    "socket.io-client": "/socket.io/socket.io",
     "moment": "github:moment/moment@^2.8.3",
+    "socket.io-client": "/socket.io/socket.io",
     "text": "github:systemjs/plugin-text@^0.0.2",
     "github:angular/bower-angular-animate@1.3.3": {
       "angular": "github:angular/bower-angular@^1.3.0"
@@ -42,10 +44,12 @@ System.config({
 
 System.config({
   "versions": {
+    "github:GoDisco/ngFacebook": "0.1.3",
     "github:angular/bower-angular": "1.3.3",
     "github:angular/bower-angular-animate": "1.3.3",
     "github:angular/bower-angular-mocks": "1.3.3",
     "github:capaj/angular-moment": "0.8.3",
+    "github:capaj/angularLocalStorage": "0.2.1",
     "github:components/jquery": "2.1.1",
     "github:jonashartmann/webcam-directive": "1.2.0",
     "github:jspm/nodelibs": "0.0.3",

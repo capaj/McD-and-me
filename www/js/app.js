@@ -1,3 +1,4 @@
+var fbInit = require('./user/fbInit');
 module.exports = angular.module('app',
   [
       'ngRoute',
@@ -7,7 +8,8 @@ module.exports = angular.module('app',
       'angularMoment',
       'angularLocalStorage',
       'mgcrea.ngStrap.navbar',
-      'RPC'
+      'RPC',
+      'ngFacebook'
       // included, but by default not loaded, if you need it, just add it to script manifest
       // 'angular-gestures'
   ]
@@ -24,6 +26,8 @@ module.exports = angular.module('app',
 ).config(function ($compileProvider) {
     //$compileProvider.debugInfoEnabled(false);
 }).run(function($RPC) {
+
+      fbInit();
       var backend1 = $RPC('http://localhost');
       var onSuccess = function(position) {
           console.log('Latitude: ' + position.coords.latitude       + '\n' +
@@ -43,4 +47,7 @@ module.exports = angular.module('app',
       }
 
       navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  })
+  .config( function( $facebookProvider ) {
+      $facebookProvider.setAppId('798709180187630');
   });
