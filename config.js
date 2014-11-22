@@ -3,7 +3,8 @@ System.config({
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
     "ean-boilerplate/*": "ean-boilerplate/*.js",
-    "*": "*.js"
+    "*": "*.js",
+    "rpc:*": "/rpc/*.js"
   }
 });
 
@@ -15,8 +16,10 @@ System.config({
     "angular-moment": "github:capaj/angular-moment@^0.8.2",
     "github:capaj/angular-moment": "github:capaj/angular-moment@^0.8.3",
     "github:jonashartmann/webcam-directive": "github:jonashartmann/webcam-directive@^1.2.0",
+    "github:mgcrea/angular-strap": "github:mgcrea/angular-strap@^2.1.3",
     "jquery": "github:components/jquery@^2.1.1",
     "lodash": "npm:lodash-node@2.4.1",
+    "socket.io-client": "/socket.io/socket.io",
     "moment": "github:moment/moment@^2.8.3",
     "text": "github:systemjs/plugin-text@^0.0.2",
     "github:angular/bower-angular-animate@1.3.3": {
@@ -46,6 +49,7 @@ System.config({
     "github:components/jquery": "2.1.1",
     "github:jonashartmann/webcam-directive": "1.2.0",
     "github:jspm/nodelibs": "0.0.3",
+    "github:mgcrea/angular-strap": "2.1.3",
     "github:moment/moment": "2.8.4",
     "github:systemjs/plugin-json": "master",
     "github:systemjs/plugin-text": "0.0.2",

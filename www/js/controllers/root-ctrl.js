@@ -1,16 +1,15 @@
 require('../app').controller('rootCtrl', function ($scope) {
 
   $scope.menuItems = [[
-    {img: 'camera', url: '/videochat'},
-    {img: 'coffeetime-button'},
-    {img: 'comp'}
+    {img: 'camera', url: '/photo-add'},
+    {img: 'social', url: '/social'},
+    {img: 'map', url: '/map'}
+
   ], [
-    {img: 'map'},
-    {img: 'McD'},
-    {img: 'settings'}
-  ], [
-    {img: 'social'},
-    {img: 'video'},
-    {img: 'world'}
-  ]];
+
+    {img: 'video', url: '/videochat'},
+    {img: 'McD', url: '/nearestMc'},
+    {img: 'world', url: '/photo-rate'}
+
+  ]]
 });

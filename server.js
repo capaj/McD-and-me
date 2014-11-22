@@ -37,10 +37,17 @@ app.use(require('body-parser')()); 						// pull information from html in POST
 app.use(require('method-override')()); 					// simulate DELETE and PUT
 
 var port = process.env.PORT || pjson.port;
+
 var server = app.listen(port, function () {
     app.get('/config.js', function(req, res) {
        res.sendFile('config.js', {root:'./'});  //JSPM config file for frontend
     });
+
+    var rpc = require('socket.io-rpc');
+    var io = require('socket.io').listen(server);
+
+    var rpcMaster = rpc(io, app).expose('photosInterface', require('./server/photos/photos-interface'));
+
     app.get('*', function(req, res){
         var pathName = req._parsedUrl.pathname;
 
@@ -54,4 +61,3 @@ var server = app.listen(port, function () {
     });
     logger.info("Express server listening on port %d in %s mode", this.address().port, env);
 });
-

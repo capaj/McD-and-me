@@ -1,0 +1,4 @@
+<div class="container aligner photo-rate" rpc-controller="photoUploadCtrl" rpc-channel="photosInterface">
+	<button class="btn btn-lg btn-success" ng-click="saveToBackend(imageBase)">Upload/Take Photo to share</button>
+	<img class="currentPhoto" data-ng-src="{{imageBase | base64}}"/>
+</div>
