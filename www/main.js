@@ -1,5 +1,6 @@
 require('jquery');
 require('angular');
+require('angular-animate');
 require('./lib/angular-route/angular-route');
 require('./lib/angular-touch/angular-touch');
 require('angular-moment');

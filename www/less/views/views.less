@@ -1,0 +1,48 @@
+.menu-icon{
+	height: 82px;
+	margin: 20px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.aligner {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menuAnim-enter,
+.menuAnim-leave,
+.menuAnim-move {
+	-webkit-transition: 1s linear all;
+	-moz-transition: 1s linear all;
+	-o-transition: 1s linear all;
+	transition: 1s linear all;
+	position:relative;
+}
+
+.menuAnim-enter {
+	left:-10px;
+	opacity:0;
+}
+.menuAnim-enter.menuAnim-enter-active {
+	left:0;
+	opacity:1;
+}
+
+.menuAnim-leave {
+	left:0;
+	opacity:1;
+}
+.menuAnim-leave.menuAnim-leave-active {
+	left:-10px;
+	opacity:0;
+}
+
+.menuAnim-move {
+	opacity:0.5;
+}
+.menuAnim-move.menuAnim-move-active {
+	opacity:1;
+}

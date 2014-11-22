@@ -2,6 +2,7 @@ module.exports = angular.module('app',
     [
         'ngRoute',
         'ngTouch',
+        'ngAnimate',
         'angularMoment',
         'angularLocalStorage'
         // included, but by default not loaded, if you need it, just add it to script manifest

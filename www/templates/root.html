@@ -1,3 +1,14 @@
 <div class="container" ng-controller="rootCtrl">
+    <div class="aligner">
+
+        <div ng-repeat="row in menuItems" class="menuAnim">
+            <div class="row">
+                <div ng-repeat="link in row">
+                    <img class="menu-icon" ng-src="{{ '/img/buttons/' + link.img + '.png' }}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </div>
