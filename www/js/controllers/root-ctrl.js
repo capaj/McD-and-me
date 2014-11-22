@@ -1,7 +1,7 @@
 require('../app').controller('rootCtrl', function ($scope) {
 
   $scope.menuItems = [[
-    {img: 'camera'},
+    {img: 'camera', url: '/videochat'},
     {img: 'coffeetime-button'},
     {img: 'comp'}
   ], [
