@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 var logger = require('winston');
-
+require('array-sugar');
 var pjson = require('./package.json');
 var env = process.env.NODE_ENV = pjson.env || 'development';
 

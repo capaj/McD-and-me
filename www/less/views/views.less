@@ -17,6 +17,7 @@
 	.photo-actions{
 		align-self: stretch;
 		.row{
+			margin: 0px;
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
@@ -26,6 +27,7 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 				display: inline-block;
+				margin: 0px 34px;
 			}
 		}
 		.camera-icon{
@@ -44,13 +46,37 @@
 .currentPhoto{
 	width: 90%;
 }
+.photo-rate{
+	.rate-actions{
+		position: absolute;
+		bottom: 0px;
+		right: 20px;
+		width: 92%;
+		.highlight{
+			color: @alert-danger-bg;
+		}
+		.likes{
+			.glyphicon-heart{
+				float: right;
+			}
+		}
+	}
+	.glyphicon{
+		font-size: 40px;
+		.glyphicon-arrow-left{
+			color: @alert-danger-bg;
+		}
+		.glyphicon-arrow-right{
+			color: @alert-info-bg;
+		}
+	}
+}
 .main-menu{
 	flex-direction: column;
 	.btn-info{
 		margin: 15px;
 	}
 	.user-profile{
-		margin-top: 62px;
 		display: flex;
 	}
 	.fb-profile-pic{

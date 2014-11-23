@@ -1,3 +1,32 @@
 <div class="container photo-rate" rpc-controller="photoRateCtrl" rpc-channel="photosInterface">
 
+	<ul swing-stack>
+		<li swing-card swing-on-throwout="onThrow(eventObject, photo, $index)" swing-on-dragend="onThrow(eventObject, photo, $index)"
+				ng-repeat="photo in swiperPhotos">
+			<img ng-if="photo.data" ng-src="{{ photo.data }}">
+			<div ng-show="!photo.data" class="alert alert-success"><h5>We have no more photos!</h5><p>you have seen it all...</p></div>
+		</li>
+	</ul>
+	<div class="rate-actions">
+		<div class="row">
+			<div class="col-xs-4">
+				<span><i class="glyphicon glyphicon-arrow-left" ng-class="{highlight: userDisliked}"></i></span>
+			</div>
+			<div class="col-xs-4">
+
+			</div>
+			<div class="col-xs-4">
+				<span><i class="glyphicon glyphicon-arrow-right pull-right" ng-class="{highlight: userLiked}"></i></span>
+			</div>
+		</div>
+		<div class="row likes">
+			<div class="col-xs-6">
+				<span><i class="glyphicon glyphicon-ban-circle" ng-class="{highlight: userDisliked}"></i></span>
+			</div>
+			<div class="col-xs-6">
+				<span><i class="glyphicon glyphicon-heart" ng-class="{highlight: userLiked}"></i>{{ numberOfLikes }}</span>
+			</div>
+		</div>
+	</div>
+
 </div>
