@@ -73,6 +73,7 @@
       "github:capaj/angular-camera": "^0.2.2",
       "github:capaj/angular-moment": "^0.8.3",
       "github:capaj/angularLocalStorage": "^0.2.1",
+      "github:capaj/ng-tools": "^0.4.2",
       "github:gajus/angular-swing": "master",
       "github:jonashartmann/webcam-directive": "^1.2.0",
       "github:mgcrea/angular-strap": "^2.1.3",

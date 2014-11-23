@@ -1,8 +1,8 @@
 <div class="container aligner photo-add" rpc-controller="photoUploadCtrl" rpc-channel="photosInterface">
 	<button class="btn btn-lg btn-success" ng-click="saveToBackend(imageBase)" file-input on-file="saveToBackend">Pick from the phone</button>
 
-	<img ng-if="photo" class="photo" data-ng-src="{{photo}}"/>
-	<ng-camera ng-hide="photo || result"
+	<!--<img ng-if="photo" class="photo" data-ng-src="{{photo}}"/>-->
+	<ng-camera ng-hide="result"
 			type="photo"
 			enabled="true"
 			width="100%"
@@ -10,17 +10,11 @@
 			capture-height="768"
 			countdown="countdown"
 			ng-model="photo"
-			capture="photoTaken(media)"
+			accept-callback="saveToBackend(photo)"
+			overlay-src="photo"
 			capture-message="Smile!"></ng-camera>
 	<div class="update-result" ng-show="result">
-		<span>{{ result }}</span>
-	</div>
-	<div class="photo-actions">
-		<div class="row">
-			<div class="countdown-enabler" ng-class="{enabled: countdown === 3}" ng-click="countdownSwitch()"></div>
-			<div class="camera-icon" ng-hide="photo" ng-click="takePhoto()"></div>
-			<div class="trash" ng-class="{enabled: photo}" ng-click="trashPhoto()"></div>
-		</div>
+		<div class="alert alert-success">Your picture was saved, thank you for sharing!</div>
 	</div>
 
 </div>

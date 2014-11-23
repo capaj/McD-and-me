@@ -1,9 +1,11 @@
 require('../app').controller('photoRateCtrl', function($scope, photosInterface, $filter, $timeout) {
-  var lastId = 1;
+  var lastId = -1;
   var addAnotherToSwiper = function() {
-    return photosInterface.getRand(lastId + 1).then(function(img) {
+    lastId += 1;
+
+    return photosInterface.getRand(lastId).then(function(img) {
       img.data = $filter('base64')(img.data);
-      lastId = img.id;
+      //lastId = img.id;
       console.log("added img ", img.id);
       $scope.swiperPhotos.push(img); //photo user can vote on
       return lastId;

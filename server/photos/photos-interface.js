@@ -9,6 +9,7 @@ var contentPath = './content/';
 var imageNumbers = files.map(function(name) {
   return parseInt(name.substr(contentPath.length));
 });
+imageNumbers.sort(function numOrdA(a, b){ return (a-b); });
 
 module.exports = {
   /**
@@ -16,13 +17,14 @@ module.exports = {
    * @returns {data: {String}, id: {String}} object
    */
   getRand: function(previous) {
-    if (!previous) {
-      previous = 1;
+    if (previous === undefined) {
+      previous = 0;
     }
-    var nextIndex = (imageNumbers.indexOf(previous) || previous) + 1;
+    //var nextIndex = (imageNumbers.indexOf(previous) || previous) + 1;
 
-    return fs.readFileAsync(contentPath + imageNumbers[nextIndex] + '.jpg', 'base64').then(function(data) {
-      return {data:data.toString(), id: nextIndex};
+    var nextNumber = (previous + 1);
+    return fs.readFileAsync(contentPath + nextNumber + '.jpg', 'base64').then(function(data) {
+      return {data:data.toString(), id: nextNumber};
     });
   },
   /**
@@ -30,8 +32,9 @@ module.exports = {
    * @returns {Promise<Number>} id of the image
    */
   save: function(data) {
-    var id = imageNumbers.last + 1;
+    var id = Math.max.apply(imageNumbers, imageNumbers) + 1;
     return fs.writeFileAsync( contentPath + id + ".jpg", new Buffer(data, "base64")).then(function(){
+      console.log("image saved ", id);
        return id;
     });
   },

@@ -1,5 +1,5 @@
 var fbInit = require('./user/fbInit');
-module.exports = angular.module('app',
+module.exports = angular.module('mcdAndMe',
   [
     'ngRoute',
     'ngTouch',
@@ -9,8 +9,8 @@ module.exports = angular.module('app',
     'angularLocalStorage',
     'mgcrea.ngStrap.navbar',
     'RPC',
+    'ngTools',
     'ngFacebook',
-    'omr.directives',
     'gajus.swing'
 
     // included, but by default not loaded, if you need it, just add it to script manifest
