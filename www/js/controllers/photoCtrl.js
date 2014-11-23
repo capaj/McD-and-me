@@ -1,10 +1,13 @@
-require('../app').controller('photoUploadCtrl', function($scope, photosInterface) {
+require('../app').controller('photoUploadCtrl', function($scope, photosInterface, $facebook) {
 
   $scope.saveToBackend = function(imgData){
   	photosInterface.save(imgData).then(function(){
-  	    console.log("succesfully saved");
+  	    $scope.result = "succesfully saved";
+        //$facebook.
   	});
   };
+
+  $scope.countdown = 3;
 
   $scope.upload = function() {
     navigator.camera.getPicture(onSuccess, onFail, {

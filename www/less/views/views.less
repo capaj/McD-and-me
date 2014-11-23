@@ -1,6 +1,45 @@
 @import "videochat";
-.photo-rate{
+.photo-add{
 	flex-direction: column;
+	img{
+		width: 100%;
+	}
+	padding: 0px;
+	ng-camera{
+		width: 100%;
+		video{
+			max-height: 650px;
+		}
+	}
+	.ng-camera-take-btn{
+		display: none;
+	}
+	.photo-actions{
+		align-self: stretch;
+		.row{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			div{
+				height: 99px;
+				width: 92px;
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: inline-block;
+			}
+		}
+		.camera-icon{
+			background-image: url("/img/icons/camera.png");
+			margin: 0px 116px;
+			width: 120px !important;
+		}
+		.trash{
+			background-image: url("/img/icons/trash.png");
+		}
+		.countdown-enabler{
+			background-image: url("/img/icons/clock.png");
+		}
+	}
 }
 .currentPhoto{
 	width: 90%;
@@ -11,13 +50,16 @@
 		margin: 15px;
 	}
 	.user-profile{
-		margin-bottom: 25px;
+		margin-top: 62px;
 		display: flex;
 	}
 	.fb-profile-pic{
 		max-height: 70px;
 		border-radius: 7px;
 		margin-right: 15px;
+	}
+	.fb-name{
+		color: white;
 	}
 }
 
@@ -34,7 +76,7 @@
 .aligner {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .menuAnim-enter,

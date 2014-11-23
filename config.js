@@ -15,8 +15,10 @@ System.config({
     "angular-mocks": "github:angular/bower-angular-mocks@^1.3.3",
     "angular-moment": "github:capaj/angular-moment@^0.8.2",
     "github:GoDisco/ngFacebook": "github:GoDisco/ngFacebook@^0.1.3",
+    "github:capaj/angular-camera": "github:capaj/angular-camera@^0.2.2",
     "github:capaj/angular-moment": "github:capaj/angular-moment@^0.8.3",
     "github:capaj/angularLocalStorage": "github:capaj/angularLocalStorage@^0.2.1",
+    "github:gajus/angular-swing": "github:gajus/angular-swing@master",
     "github:jonashartmann/webcam-directive": "github:jonashartmann/webcam-directive@^1.2.0",
     "github:mgcrea/angular-strap": "github:mgcrea/angular-strap@^2.1.3",
     "jquery": "github:components/jquery@^2.1.1",
@@ -25,7 +27,7 @@ System.config({
     "socket.io-client": "/socket.io/socket.io",
     "text": "github:systemjs/plugin-text@^0.0.2",
     "github:angular/bower-angular-animate@1.3.3": {
-      "angular": "github:angular/bower-angular@^1.3.0"
+      "angular": "github:angular/bower-angular@^1.3.3"
     },
     "github:jspm/nodelibs@0.0.3": {
       "Base64": "npm:Base64@0.2",
@@ -48,9 +50,11 @@ System.config({
     "github:angular/bower-angular": "1.3.3",
     "github:angular/bower-angular-animate": "1.3.3",
     "github:angular/bower-angular-mocks": "1.3.3",
+    "github:capaj/angular-camera": "0.2.2",
     "github:capaj/angular-moment": "0.8.3",
     "github:capaj/angularLocalStorage": "0.2.1",
     "github:components/jquery": "2.1.1",
+    "github:gajus/angular-swing": "master",
     "github:jonashartmann/webcam-directive": "1.2.0",
     "github:jspm/nodelibs": "0.0.3",
     "github:mgcrea/angular-strap": "2.1.3",
